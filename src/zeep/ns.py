@@ -10,8 +10,8 @@ WSDL = "http://schemas.xmlsoap.org/wsdl/"
 HTTP = "http://schemas.xmlsoap.org/wsdl/http/"
 MIME = "http://schemas.xmlsoap.org/wsdl/mime/"
 
-WSA = "http://www.w3.org/2005/08/addressing"
-
+# WSA = "http://www.w3.org/2005/08/addressing"
+WSA = "http://schemas.xmlsoap.org/ws/2004/08/addressing"
 
 DS = "http://www.w3.org/2000/09/xmldsig#"
 WSSE = (
