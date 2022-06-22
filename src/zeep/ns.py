@@ -1,3 +1,5 @@
+from os import environ
+
 SOAP_11 = "http://schemas.xmlsoap.org/wsdl/soap/"
 SOAP_12 = "http://schemas.xmlsoap.org/wsdl/soap12/"
 SOAP_ENV_11 = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -10,8 +12,11 @@ WSDL = "http://schemas.xmlsoap.org/wsdl/"
 HTTP = "http://schemas.xmlsoap.org/wsdl/http/"
 MIME = "http://schemas.xmlsoap.org/wsdl/mime/"
 
-# WSA = "http://www.w3.org/2005/08/addressing"
-WSA = "http://schemas.xmlsoap.org/ws/2004/08/addressing"
+# Default current WSA namespace can be overriden to the old version by the env. var. WSA_NS
+if environ.get('WSA_NS') == 'V2004.08':
+    WSA = "http://schemas.xmlsoap.org/ws/2004/08/addressing"
+else:
+    WSA = "http://www.w3.org/2005/08/addressing"
 
 DS = "http://www.w3.org/2000/09/xmldsig#"
 WSSE = (
